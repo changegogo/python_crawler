@@ -4,7 +4,7 @@ import json
 
 base_url = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su'
 while True:
-    wd = input('请输入要查询的词语:')
+    wd = input('请输入要查询的词语():')
     query_params = {}
     query_params['json'] = 1
     query_params['cb'] = 'callback'
