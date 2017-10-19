@@ -1,3 +1,5 @@
+# 华氏温度转摄氏度
+
 class Celsius:
 	def __init__(self, value=26.0):
 		self.value = float(value)
