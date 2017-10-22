@@ -13,7 +13,7 @@ class Fahrenheit:
 		return instance.cel*1.8+32
 	def __set__(self, instance, value):
 		instance.cel = (float(value)-32)/1.8
-
+#
 class Temperture:
 	cel = Celsius()
 	fah = Fahrenheit()
