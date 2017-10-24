@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>预约回拨</title>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	</head>
+	<body>
+		<h3>预约回拨</h3>
+		<button id="btn">确认回拨</button>
+		<script type="text/javascript">
+			$(function(){
+				var fnUrlReplace = function (eleLink) {
+				    var href = eleLink;
+				    if (href && /^#|javasc/.test(href) === false) {
+				        if (window.history.replaceState) {
+				            window.history.replaceState(null, document.title, href + '#');
+				            window.location.replace('');
+				        } else {
+				            window.location.replace(href);
+				        }
+				    }
+				};
+				
+				$('#btn').on('click', function (event) {
+					if (event && event.preventDefault) {
+						event.preventDefault();
+					}
+					fnUrlReplace("/history/a.html");
+					return false
+				})
+			})
+		</script>
+	</body>
+</html>
