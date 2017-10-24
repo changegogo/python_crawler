@@ -23,7 +23,7 @@ while True:
 
     html = html.split(b'(')[-1].split(b')')[0]
     obj = json.loads(html.decode('gbk'))
-    # master
+    ## master
     print(obj['s'])
     is_continue = input('是否继续查询(y/n):')
     if is_continue == 'n':
